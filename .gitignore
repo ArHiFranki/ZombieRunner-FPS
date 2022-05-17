@@ -26,9 +26,11 @@
 # Ignore Assets Packs
 /[Aa]ssets/[Aa]ssets [Pp]ack*
 /[Aa]ssets/[Aa]ssets [Pp]acks*
+/[Aa]ssets/[Aa]sset [Pp]ack*
 /[Aa]ssets/[Aa]sset [Pp]acks*
 /[Aa]ssets/[Aa]ssets[Pp]ack*
 /[Aa]ssets/[Aa]ssets[Pp]acks*
+/[Aa]ssets/[Aa]sset[Pp]ack*
 /[Aa]ssets/[Aa]sset[Pp]acks*
 
 # Ignore APIKeys folder
