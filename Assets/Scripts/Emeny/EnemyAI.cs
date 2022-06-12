@@ -4,18 +4,24 @@ using UnityEngine;
 using UnityEngine.AI;
 
 [RequireComponent(typeof(NavMeshAgent))]
+[RequireComponent(typeof(Animator))]
 public class EnemyAI : MonoBehaviour
 {
     [SerializeField] private Transform target;
     [SerializeField] private float chaseRange = 5f;
 
     private NavMeshAgent navMeshAgent;
+    private Animator animator;
     private float distanceToTarget = Mathf.Infinity;
     private bool isProvoked = false;
+
+    private const string moveAnimationTrigger = "move";
+    private const string attackAnimationBool = "attack";
 
     private void Awake()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
+        animator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -52,11 +58,14 @@ public class EnemyAI : MonoBehaviour
 
     private void ChaseTarget()
     {
+        animator.SetBool(attackAnimationBool, false);
+        animator.SetTrigger(moveAnimationTrigger);
         navMeshAgent.SetDestination(target.transform.position);
     }
 
     private void AttackTarget()
     {
+        animator.SetBool(attackAnimationBool, true);
         Debug.Log(name + " has attack " + target.name);
     }
 
