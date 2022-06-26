@@ -2,11 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(DeathHandler))]
 public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] private float maxPlayerHealth = 100f;
 
+    private DeathHandler deathHandler;
     private float currentPlayerHealth;
+
+    private void Awake()
+    {
+        deathHandler = GetComponent<DeathHandler>();
+    }
 
     private void Start()
     {
@@ -18,7 +25,7 @@ public class PlayerHealth : MonoBehaviour
         currentPlayerHealth -= damage;
         if (currentPlayerHealth <= 0)
         {
-            Debug.Log("You Died");
+            deathHandler.HandleDeath();
         }
     }
 }
