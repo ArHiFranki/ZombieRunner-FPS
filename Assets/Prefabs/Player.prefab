@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3530927719917788028}
   - component: {fileID: 3137277204748578606}
   - component: {fileID: -2751903740555834049}
+  - component: {fileID: -3379583493772528347}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -177,8 +178,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myCamera: {fileID: 3530927720565188867}
-  zoomInFOVValue: 0
-  zoomOutFOVValue: 0
+  zoomInFOV: 25
+  zoomInSensitivity: 0.75
+--- !u!114 &-3379583493772528347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3530927720563288869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4cadd5cf48e6e04a9da0d6a531544ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ammoAmount: 10
 --- !u!1 &3530927720563288871
 GameObject:
   m_ObjectHideFlags: 0
@@ -480,6 +494,7 @@ MonoBehaviour:
   damage: 30
   muzzleFlash: {fileID: 2805593545851902505}
   hitEffect: {fileID: 3022463605190818088, guid: 57e16192a8dfe7145a2b69aef4032b08, type: 3}
+  ammoSlot: {fileID: -3379583493772528347}
 --- !u!198 &2805593545851902505 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 1213538332767796018, guid: ada2587319194f542957a8c2ae277cb9, type: 3}

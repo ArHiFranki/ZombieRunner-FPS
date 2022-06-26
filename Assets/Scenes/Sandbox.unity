@@ -5166,10 +5166,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -2751903740555834049, guid: 65d4ce987c5b68640b49a16e491fe0a1, type: 3}
-      propertyPath: zoomInSensitivity
-      value: 0.75
-      objectReference: {fileID: 0}
     - target: {fileID: 3137277204748578606, guid: 65d4ce987c5b68640b49a16e491fe0a1, type: 3}
       propertyPath: gameOverCanvas
       value: 
