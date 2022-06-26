@@ -1883,7 +1883,7 @@ PrefabInstance:
       objectReference: {fileID: 1616132156}
     - target: {fileID: 4136795932808011563, guid: 0eb258e9d36795e4f8bf15bad11fdfa7, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4136795932808011563, guid: 0eb258e9d36795e4f8bf15bad11fdfa7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2539,7 +2539,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1170221821
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3726,9 +3726,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 361507956}
+  - {fileID: 2000507830}
   - {fileID: 1667931621}
   - {fileID: 783231070}
-  - {fileID: 2000507830}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3967,7 +3967,7 @@ PrefabInstance:
       objectReference: {fileID: 1616132156}
     - target: {fileID: 4136795932808011563, guid: 0eb258e9d36795e4f8bf15bad11fdfa7, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4136795932808011563, guid: 0eb258e9d36795e4f8bf15bad11fdfa7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4716,7 +4716,7 @@ PrefabInstance:
       objectReference: {fileID: 1616132156}
     - target: {fileID: 4136795932808011563, guid: 0eb258e9d36795e4f8bf15bad11fdfa7, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4136795932808011563, guid: 0eb258e9d36795e4f8bf15bad11fdfa7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5170,6 +5170,10 @@ PrefabInstance:
       propertyPath: gameOverCanvas
       value: 
       objectReference: {fileID: 1170221824}
+    - target: {fileID: 3137277204748578606, guid: 65d4ce987c5b68640b49a16e491fe0a1, type: 3}
+      propertyPath: gunReticleCanvas
+      value: 
+      objectReference: {fileID: 33035751}
     - target: {fileID: 3530927720563288869, guid: 65d4ce987c5b68640b49a16e491fe0a1, type: 3}
       propertyPath: m_Name
       value: Player
