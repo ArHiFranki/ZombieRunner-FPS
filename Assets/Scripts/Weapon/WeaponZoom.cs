@@ -3,22 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.Characters.FirstPerson;
 
-[RequireComponent(typeof(RigidbodyFirstPersonController))]
 public class WeaponZoom : MonoBehaviour
 {
     [SerializeField] private Camera myCamera;
     [SerializeField] private float zoomInFOV = 25f;
     [SerializeField] private float zoomInSensitivity = 0.5f;
+    [SerializeField] private RigidbodyFirstPersonController myFPSController;
 
     private float zoomOutFOV;
     private float zoomOutSensitivity;
     private bool isZoomIn = false;
-    private RigidbodyFirstPersonController myFPSController;
-
-    private void Awake()
-    {
-        myFPSController = GetComponent<RigidbodyFirstPersonController>();
-    }
 
     private void Start()
     {

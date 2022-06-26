@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 3530927720557797063}
   - component: {fileID: 3530927719917788028}
   - component: {fileID: 3137277204748578606}
-  - component: {fileID: -2751903740555834049}
   - component: {fileID: -3379583493772528347}
   m_Layer: 0
   m_Name: Player
@@ -165,21 +164,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOverCanvas: {fileID: 0}
   gunReticleCanvas: {fileID: 0}
---- !u!114 &-2751903740555834049
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3530927720563288869}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bcf50d343a53074cbad5c927c549da9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myCamera: {fileID: 3530927720565188867}
-  zoomInFOV: 25
-  zoomInSensitivity: 0.75
 --- !u!114 &-3379583493772528347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -455,6 +439,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pistol
       objectReference: {fileID: 0}
+    - target: {fileID: 5077452405243030695, guid: 8b0fc7769ddb48349aa67360b55e128a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6998605137437863466, guid: 8b0fc7769ddb48349aa67360b55e128a, type: 3}
       propertyPath: ammoSlot
       value: 
@@ -477,10 +465,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 61103996144174210}
     m_Modifications:
-    - target: {fileID: 5077452405240771175, guid: 9f6924f765983594c816d08d7b754cf9, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 8f68ff505720ab849b87a6295951ada9, type: 2}
     - target: {fileID: 5077452405242671239, guid: 9f6924f765983594c816d08d7b754cf9, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -529,10 +513,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Carbine
       objectReference: {fileID: 0}
-    - target: {fileID: 5077452405243030695, guid: 9f6924f765983594c816d08d7b754cf9, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6998605137437863466, guid: 9f6924f765983594c816d08d7b754cf9, type: 3}
       propertyPath: ammoSlot
       value: 
@@ -541,6 +521,14 @@ PrefabInstance:
       propertyPath: myCamera
       value: 
       objectReference: {fileID: 3530927720565188867}
+    - target: {fileID: 8199193908636056228, guid: 9f6924f765983594c816d08d7b754cf9, type: 3}
+      propertyPath: myCamera
+      value: 
+      objectReference: {fileID: 3530927720565188867}
+    - target: {fileID: 8199193908636056228, guid: 9f6924f765983594c816d08d7b754cf9, type: 3}
+      propertyPath: myFPSController
+      value: 
+      objectReference: {fileID: 3530927720557797063}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f6924f765983594c816d08d7b754cf9, type: 3}
 --- !u!4 &1609709524603791037 stripped
