@@ -14,6 +14,11 @@ public class WeaponZoom : MonoBehaviour
     private float zoomOutSensitivity;
     private bool isZoomIn = false;
 
+    private void OnDisable()
+    {
+        ZoomOut();
+    }
+
     private void Start()
     {
         zoomOutFOV = myCamera.fieldOfView;
@@ -31,18 +36,28 @@ public class WeaponZoom : MonoBehaviour
         {
             if (isZoomIn)
             {
-                myCamera.fieldOfView = zoomOutFOV;
-                myFPSController.mouseLook.XSensitivity = zoomOutSensitivity;
-                myFPSController.mouseLook.YSensitivity = zoomOutSensitivity;
+                ZoomOut();
             }
             else
             {
-                myCamera.fieldOfView = zoomInFOV;
-                myFPSController.mouseLook.XSensitivity = zoomInSensitivity;
-                myFPSController.mouseLook.YSensitivity = zoomInSensitivity;
+                ZoomIn();
             }
-
-            isZoomIn = !isZoomIn;
         }
+    }
+
+    private void ZoomIn()
+    {
+        isZoomIn = true;
+        myCamera.fieldOfView = zoomInFOV;
+        myFPSController.mouseLook.XSensitivity = zoomInSensitivity;
+        myFPSController.mouseLook.YSensitivity = zoomInSensitivity;
+    }
+
+    private void ZoomOut()
+    {
+        isZoomIn = false;
+        myCamera.fieldOfView = zoomOutFOV;
+        myFPSController.mouseLook.XSensitivity = zoomOutSensitivity;
+        myFPSController.mouseLook.YSensitivity = zoomOutSensitivity;
     }
 }
