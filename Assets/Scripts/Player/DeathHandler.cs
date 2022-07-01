@@ -17,6 +17,7 @@ public class DeathHandler : MonoBehaviour
         gameOverCanvas.gameObject.SetActive(true);
         gunReticleCanvas.gameObject.SetActive(false);
         Time.timeScale = 0;
+        FindObjectOfType<WeaponSwitcher>().enabled = false;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
