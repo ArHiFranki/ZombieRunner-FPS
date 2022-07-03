@@ -5,6 +5,7 @@ using UnityEngine.AI;
 
 [RequireComponent(typeof(NavMeshAgent))]
 [RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(EnemyHealth))]
 public class EnemyAI : MonoBehaviour
 {
     [SerializeField] private Transform target;
@@ -13,6 +14,7 @@ public class EnemyAI : MonoBehaviour
 
     private NavMeshAgent navMeshAgent;
     private Animator animator;
+    private EnemyHealth enemyHealth;
     private float distanceToTarget = Mathf.Infinity;
     private bool isProvoked = false;
 
@@ -23,11 +25,20 @@ public class EnemyAI : MonoBehaviour
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
+        enemyHealth = GetComponent<EnemyHealth>();
     }
 
     private void Update()
     {
-        EnemyBehavior();
+        if(enemyHealth.IsDead)
+        {
+            enabled = false;
+            navMeshAgent.enabled = false;
+        }
+        else
+        {
+            EnemyBehavior();
+        }
     }
 
     private void EnemyBehavior()
