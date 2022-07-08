@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3530927720557797063}
   - component: {fileID: 3530927719917788028}
   - component: {fileID: 3137277204748578606}
+  - component: {fileID: 7277904460571667220}
   - component: {fileID: -3379583493772528347}
   m_Layer: 0
   m_Name: Player
@@ -82,9 +83,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 3530927720565188867}
   movementSettings:
-    ForwardSpeed: 10
+    ForwardSpeed: 8
     BackwardSpeed: 5
-    StrafeSpeed: 5
+    StrafeSpeed: 8
     RunMultiplier: 1.8
     RunKey: 304
     JumpForce: 50
@@ -164,6 +165,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOverCanvas: {fileID: 0}
   gunReticleCanvas: {fileID: 0}
+--- !u!114 &7277904460571667220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3530927720563288869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fba83e156ee0f0459c6e32656166a9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  impactCanvas: {fileID: 0}
+  impactTime: 0.3
 --- !u!114 &-3379583493772528347
 MonoBehaviour:
   m_ObjectHideFlags: 0
